@@ -50,3 +50,238 @@
 .errorMessage p {
   font-size: 1.1rem;
 }
+/* LocationDetail.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.errorMessage {
+  background-color: #fee2e2;
+  border-radius: 8px;
+  padding: 16px;
+  color: #dc2626;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.locationContent {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.mainContent {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.mainImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.location {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.description {
+  color: #374151;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.category {
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 16px 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.actionButton {
+  padding: 8px;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+.actionButton:hover {
+  background-color: #f3f4f6;
+}
+
+.liked {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.generateButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.generateButton:hover {
+  background-color: #2563eb;
+}
+
+.reviews {
+  margin-top: 24px;
+}
+
+.reviewsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.ratingBars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.ratingBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  width: 100px;
+}
+
+.star {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #fbbf24;
+  border-radius: 9999px;
+}
+
+.review {
+  display: flex;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+}
+
+.reviewContent {
+  flex: 1;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.reviewHeader h4 {
+  font-weight: 600;
+  color: #111827;
+}
+
+.reviewHeader span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.reviewStars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.helpfulButton {
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.helpfulButton:hover {
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .socialButtons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .generateButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
