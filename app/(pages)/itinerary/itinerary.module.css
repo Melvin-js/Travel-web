@@ -82,7 +82,7 @@
 .submitButton {
     padding: 12px;
     font-size: 16px;
-    background-color: #007BFF;
+    background-color: var(--foreground);
     color: white;
     cursor: pointer;
     border: none;
@@ -97,7 +97,7 @@
 }
 
 .submitButton:hover:enabled {
-    background-color: #0056b3;
+    background-color: #007BFF;
 }
 
 

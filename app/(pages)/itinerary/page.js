@@ -7,7 +7,9 @@ import html from 'remark-html';
 import { marked } from 'marked';
 import Navbar from '@/app/components/NavBar/navbar';
 import { AuthProvider } from '@/hooks/AuthContext';
-import Loader from './loader';
+import Loader from './components/loader';
+import ContentSection from './components/contentSection';
+
 
 export default function Itinerary() {
     const [boardingPoint, setBoardingPoint] = useState('');
@@ -216,8 +218,8 @@ export default function Itinerary() {
                                 <div className={styles.markdownContent} dangerouslySetInnerHTML={{ __html: markdownContent }}>
                                 </div>
                             </div>
-
                         )}
+                        <ContentSection />
                     </div>
                 )}
 
