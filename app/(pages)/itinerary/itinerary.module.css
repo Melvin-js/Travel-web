@@ -110,13 +110,13 @@
 /* Result Section (shown after form submission) */
 .resultSection {
     margin: 20px 140px;
-
+    width: 77vw;
 }
 
 /* Header for the Result Section */
 
 .resultHeader {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .resultHeader h1 {
@@ -128,36 +128,6 @@
 .resultHeader h5 {
     font-size: 16px;
 }
-
-.planData {
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.planHeader {
-    font-size: 1.8rem;
-    /* Larger font size for the heading */
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-    /* Space below the heading */
-}
-
-.planData {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.planHeader {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-}
-
 
 
 
@@ -175,7 +145,7 @@
 
 
 .weatherData table {
-    width: 100%;
+
     margin: 20px 0;
     padding: 25px 20px;
     border-radius: 8px;
@@ -246,15 +216,34 @@
 
 
 
+.planData {
+    margin-top: 80px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.planHeader {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  
+}
+
+
+
 /* General styles for markdown rendering */
 .markdownContent {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    border-radius: 8px;
+    padding: 40px 50px;
+
 }
 
 /* Heading Styles */
-.markdownContent h1,
+.markdownContent h1
 .markdownContent h2,
 .markdownContent h3,
 .markdownContent h4,
@@ -266,31 +255,32 @@
 
 /* Paragraph Styles */
 .markdownContent p {
-    margin: 10px 0;
+    margin-top: 25px;
+    font-size: 22px;
+    padding-bottom: 20px;
+    
+
 }
 
 /* Unordered List Styles (for bullet points) */
 .markdownContent ul {
     list-style-type: disc;
-    /* Ensures bullet points */
-    margin-left: 20px;
-    /* Adds indentation */
+    margin-left: 30px;
+    color: #333;
+    font-size: 16px;
 }
 
 .markdownContent ul li {
-    margin: 5px 0;
-    /* Adds spacing between list items */
+    margin: 10px 0;
 }
 
 /* Ordered List Styles (for numbered lists) */
 .markdownContent ol {
     margin-left: 20px;
-    /* Adds indentation */
 }
 
 .markdownContent ol li {
     margin: 5px 0;
-    /* Adds spacing between list items */
 }
 
 /* Bold Text */
