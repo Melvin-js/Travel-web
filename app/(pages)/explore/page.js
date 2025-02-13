@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import { auth } from "@/lib/firebaseConfig";
 import ModelButton from "@/app/components/modelButton/modelButton";
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 export default function Explore() {
   const limit = '';
@@ -25,8 +26,12 @@ export default function Explore() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentLocation, setcurrentLocation] = useState('Thiruvananthapuram');
+  const [isClient, setIsClient] = useState(false);
+  const [category, setCategory] = useState('');
 
-  const category = useSearchParams().get('category');
+  useEffect(() => {
+    setCategory(useSearchParams().get('category'));  
+  }, []);
 
   useEffect(() => {
     if (category) {
@@ -92,7 +97,7 @@ export default function Explore() {
     }
   }, [user, userID]);
 
-  
+
 
 
   return (
@@ -108,7 +113,9 @@ export default function Explore() {
             </div>
 
           </div>
+      
           <SearchBar onSearch={handleSearchChange} query={category} />
+
           {!searchQuery ? (<div>
             <div className={styles.filters}>
               <button className={filter === 'all' ? styles.filterButtonActive : styles.filterButton} onClick={() => handleFilterChange('all')}>All</button>
