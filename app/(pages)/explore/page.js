@@ -27,11 +27,20 @@ export default function Explore() {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentLocation, setcurrentLocation] = useState('Thiruvananthapuram');
   const [isClient, setIsClient] = useState(false);
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState(null); // State to hold category value
 
   useEffect(() => {
-    setCategory(useSearchParams().get('category'));  
+    setIsClient(true);
   }, []);
+
+  // Use effect to retrieve the category only after the client has loaded
+  useEffect(() => {
+    if (isClient) {
+      const searchParams = new URLSearchParams(window.location.search);
+      const categoryValue = searchParams.get('category');
+      setCategory(categoryValue);
+    }
+  }, [isClient]);
 
   useEffect(() => {
     if (category) {
